@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.main-container {
+   max-width: 100% !important;
+}
+
+body {
+ font-family: 'Poppins';
+}
+
+#section {
+ display: flex;
+}
+.nav-tabs {
+    border-bottom: 0px;
+    margin-top: 16px;
+    margin-left: 20px;
+}
+
+.nav-tabs>li {
+    float: none;
+    margin-bottom: 0px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 0px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+.tab-content {
+    width: 100%;
+    margin-right: 20px;
+}
+
+.nav-tabs>li>a:hover {
+    border-color: transparent;
+    /* border-bottom: solid 3px pink; */
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    /* border-bottom: solid 1px pink; */
+    background-color: transparent;
+}
+.nav-tabs>li>a {
+    margin-right: 20px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+a:focus, a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: var(--primary);
+    font-weight: 700;
+    cursor: default;
+    background-color: #fff;
+    border: 0px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+h1.title {
+    /* margin-left: 11px; */
+    background: var(--primary);
+    /* height: 50px; */
+    padding: 20px;
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.main-container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a {
+    color: #f06493;
+    text-decoration: none;
+}
+
+.github-icon {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+}
