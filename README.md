@@ -5,5 +5,5 @@
 # Install
 
 ```{r}
-devtools::install_github("atorus/designkit")
+devtools::install_github("MayaGans/designkit")
 ```
