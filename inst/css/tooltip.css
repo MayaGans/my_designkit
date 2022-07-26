@@ -1,0 +1,41 @@
+:root {
+  --primary: #E91E63;
+  --secondary: #FCE4EC;
+  --gray: #EFEFED;
+}
+
+.tooltip-wrapper {
+   display: inline-block;
+   width: max-content;
+}
+
+.tooltip-wrapper i {
+    color: var(--primary);
+}
+
+.tippy-tooltip.maya-theme {
+   background:  var(--gray);
+   color: #544F40;
+   font-size: 0.75rem;
+   font-weight: 400;
+   line-height: 16px;
+   letter-spacing: 0.5px;
+   text-align: left;
+}
+
+.tippy-popper[x-placement^=right] .maya-theme .tippy-arrow {
+   border-right-color:  var(--gray);
+}
+
+.tippy-popper[x-placement^=bottom] .maya-theme .tippy-arrow {
+   border-bottom-color: var(--gray);
+}
+
+.tippy-popper[x-placement^=top] .maya-theme .tippy-arrow {
+   border-top-color:  var(--gray);
+}
+
+.tippy-popper[x-placement^=left] .maya-theme .tippy-arrow {
+   border-left-color: var(--gray);
+}
+

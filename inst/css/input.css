@@ -1,0 +1,42 @@
+:root {
+  --font: Arial;
+  --primary: #E91E63;
+  --secondary: #FCE4EC;
+}
+
+.maya-input {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.maya-input input {
+  border: 2px solid #ccc;
+}
+
+.maya-input label {
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+.maya-input input:focus + label {
+   color: var(--primary) !important;
+}
+
+.maya-input input:hover {
+    border: solid 2px black;
+}
+
+.maya-input input:focus,
+.maya-iput input:active {
+    /* border-color: var(--primary); */
+    box-shadow: none;
+    border: 2px solid var(--primary);
+}
+
+.maya-input input:disabled:hover {
+    border: 1px solid #ccc;
+}
+
+.maya-input input:disabled + label {
+    color: #ccc;
+}

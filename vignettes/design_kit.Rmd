@@ -1,0 +1,178 @@
+---
+title: "Maya's Design Kit"
+output: 
+  html_document:
+    css: styles.css
+vignette: >
+  %\VignetteIndexEntry{design_kit}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo=FALSE}
+library(designkit)
+```
+
+## {.tabset}
+
+### Buttons
+
+#### Primary Button
+
+```{r, eval=FALSE}
+primary_btn("primary", "TEXT")
+primary_btn("primary", "TEXT", disabled = TRUE)
+```
+
+```{r, echo=FALSE}
+primary_btn("primary", "TEXT")
+primary_btn("primary", "TEXT", disabled = TRUE)
+```
+
+#### Secondary Button
+
+```{r, eval=FALSE}
+secondary_btn("secondary", "TEXT")
+secondary_btn("secondary", "TEXT", disabled = TRUE)
+```
+
+```{r, echo=FALSE}
+secondary_btn("secondary", "TEXT")
+secondary_btn("secondary", "TEXT", disabled = TRUE)
+```
+
+### Icon Button 
+
+```{r, eval=FALSE}
+icon_btn("icon", "calendar")
+icon_btn("icon", "calendar", disabled = TRUE)
+```
+
+```{r, echo=FALSE}
+icon_btn("icon", "calendar")
+icon_btn("icon", "calendar", disabled = TRUE)
+```
+
+### Textfield
+
+```{r, eval=FALSE}
+text_input("test", "test")
+text_input("test", "test", disabled = TRUE)
+```
+
+```{r, echo=FALSE}
+text_input("test", "test")
+text_input("test", "test", disabled = TRUE)
+```
+
+### Tab Bar
+
+```{r, eval=FALSE}
+tab_wrapper(
+  tab("TAB", ""),
+  tab("TAB", ""),
+  tab("TAB", "")
+)
+```
+
+
+```{r, echo=FALSE}
+htmltools::HTML('<div class="Panel">
+	<nav>
+		<ul class="Tabs">
+			<li class="Tabs__tab active Tab"><a href="#">TAB</a></li>
+			<li class="Tabs__tab Tab"><a href="#">TAB</a></li>
+			<li class="Tabs__tab Tab"><a href="#">TAB</a></li>
+			<li class="Tabs__presentation-slider" role="presentation"></li>
+		</ul>
+	</nav>
+</div>')
+```
+
+<script>
+var tabs = document.getElementsByClassName('Tab');
+
+Array.prototype.forEach.call(tabs, function(tab) {
+	tab.addEventListener('click', setActiveClass);
+});
+
+function setActiveClass(evt) {
+	Array.prototype.forEach.call(tabs, function(tab) {
+		tab.classList.remove('active');
+	});
+	
+	evt.currentTarget.classList.add('active');
+}
+</script>
+
+<style>
+ .Panel__body {
+	 background-color: #f2f2f2;
+	 padding: 10px 20px;
+}
+ .Tabs {
+	 position: relative;
+	 background-color: #fff;
+	 margin: 0;
+	 padding: 0;
+	 list-style: none;
+	 width: max-content;
+}
+ .Tabs:after {
+	 content: ' ';
+	 display: table;
+	 clear: both;
+}
+ .Tabs__tab {
+	 float: left;
+	 width: 33.333%;
+	 text-align: center;
+}
+ .Tabs__tab:first-child.active ~ .Tabs__presentation-slider {
+	 transform: translateX(0) scaleX(0.333);
+}
+ .Tabs__tab:nth-child(2).active ~ .Tabs__presentation-slider {
+	 transform: translateX(33.333%) scaleX(0.333);
+}
+ .Tabs__tab:nth-child(3).active ~ .Tabs__presentation-slider {
+	 transform: translateX(calc(33.333% * 2)) scaleX(0.333);
+}
+ .Tabs__presentation-slider {
+	 position: absolute;
+	 bottom: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 2px;
+	 background-color: var(--primary);
+	 transform-origin: 0 0;
+	 transition: transform 0.25s;
+}
+ .Tab {
+	 font-weight: 600;
+}
+
+ .Tab > a {
+	 display: block;
+	 padding: 10px 12px;
+	 text-decoration: none;
+	 color: darkgray;
+	 transition: color 0.15s;
+}
+ .Tab.active > a {
+	 color: var(--primary);
+	 text-decoration: none;
+}
+ .Tab:hover > a {
+	 color: var(--primary);
+	 background-color: var(--secondary);
+	 text-decoration: none;
+}
+</style>
+
+### Tooltip
+
+```{r}
+tooltip_element("wrapper-id", 
+                icon_btn("search", icon = "search"),
+                "Lorem ipsum")
+```

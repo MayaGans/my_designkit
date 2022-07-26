@@ -1,0 +1,13 @@
+name: mayas_design_kit
+title: mayas_design_kit
+username: maya.gans
+account: maya.gans
+server: atorus-connect.eastus2.cloudapp.azure.com
+hostUrl: https://atorus-connect.eastus2.cloudapp.azure.com/__api__
+appId: 209
+bundleId: 606
+url: https://atorus-connect.eastus2.cloudapp.azure.com:443/content/fa21f5b4-e837-4eff-828f-61f5e8d2b828/
+when: 1645115026.00651
+lastSyncTime: 1645115026.00652
+asMultiple: FALSE
+asStatic: TRUE

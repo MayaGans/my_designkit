@@ -1,0 +1,59 @@
+:root {
+  --font: Arial;
+  --primary: #E91E63;
+  --secondary: #FCE4EC;
+}
+
+.maya-tabpanel .nav-tabs {
+    border-bottom: 0px;
+    display: flex;
+}
+
+.maya-tabpanel .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: var(--primary);
+    cursor: default;
+    background-color: #fff;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom-color: 4px solid var(--primary);
+}
+
+.maya-tabpanel .nav>li>a:hover {
+    text-decoration: none;
+    background-color: var(--secondary);
+}
+
+.maya-tabpanel li.active {
+    border-bottom: solid 2px var(--primary);
+}
+
+.maya-tabpanel .nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 0px;
+    border-radius: initial;
+    color: darkgray;
+    font-weight: 600;
+}
+.ripple-tab {
+  position: absolute;
+  background: var(--primary);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
